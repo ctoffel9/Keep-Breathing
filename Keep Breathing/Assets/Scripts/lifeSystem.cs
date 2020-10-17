@@ -18,7 +18,7 @@ public class lifeSystem : MonoBehaviour
     public bool maskerON;
 
     public Text healthView;
-    private float health;
+    public float health;
     private float healthDecrease;
     
 
@@ -110,10 +110,21 @@ public class lifeSystem : MonoBehaviour
     }
     void healthSystem()
     {
-
-        if (!maskerON || maskQuality <= 0 && dangerZone == true)
+        if (health <= 0)
+        {
+            health = 0;
+        }
+        if (health > 100)
+        {
+            health = 100;
+        }
+        if (!maskerON || maskQuality <= 0 && dangerZone == true && health > 0)
         {
             health = health - healthDecrease * Time.deltaTime;
+        }
+        if (health == 0 || health < 0)
+        {
+            Debug.Log("Player is not breathing");
         }
     }
 }
