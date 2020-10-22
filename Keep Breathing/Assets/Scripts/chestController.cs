@@ -5,19 +5,21 @@ using UnityEngine;
 public class chestController : MonoBehaviour
 {
     public bool isOpen;
-    public Animator anim;   
+    public Animator anim;
+    private inventorySystem inventory;
     public void openChest()
     {
         if (!isOpen)
         {
             isOpen = true;
             Debug.Log("Chest is now open...");
+
         }
     }
 
     private void Update()
     {
-       if (isOpen == true)
+        if (isOpen == true)
         {
             anim.SetBool("isOpen", true);
         }
