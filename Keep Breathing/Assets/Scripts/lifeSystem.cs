@@ -42,10 +42,10 @@ public class lifeSystem : MonoBehaviour
         healthView.text = (Mathf.Floor(Mathf.Clamp(health, 0, 100)).ToString());
 
         staminaSystem();
-        if (maskerON)
+        if (maskerON == true)
         {
             maskerSystem();
-        }
+        } 
         healthSystem();
         
     }
@@ -118,7 +118,7 @@ public class lifeSystem : MonoBehaviour
         {
             health = 100;
         }
-        if (!maskerON || maskQuality <= 0 && dangerZone == true && health > 0)
+        if (maskerON == false | maskQuality <= 0 && dangerZone == true && health > 0)
         {
             health = health - healthDecrease * Time.deltaTime;
         }

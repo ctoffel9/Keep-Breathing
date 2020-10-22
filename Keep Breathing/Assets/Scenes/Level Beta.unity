@@ -1533,7 +1533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de428dc88a13624468439fd51b04739e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lS: {fileID: 1284768766}
+  lS: {fileID: 1870530485}
 --- !u!1 &1049106775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284768763}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfca0df82f1ec2e4c90e5e75326a4a5a, type: 3}
   m_Name: 
@@ -2688,6 +2688,7 @@ GameObject:
   - component: {fileID: 1870530482}
   - component: {fileID: 1870530483}
   - component: {fileID: 1870530484}
+  - component: {fileID: 1870530485}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2746,6 +2747,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1870530485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870530481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfca0df82f1ec2e4c90e5e75326a4a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1870530481}
+  pC: {fileID: 1870530483}
+  staminaView: {fileID: 1855154874}
+  stamina: 100
+  maskQualityView: {fileID: 2092486265}
+  maskQuality: 100
+  dangerZone: 0
+  maskerON: 1
+  healthView: {fileID: 2281895}
+  health: 0
 --- !u!1 &1955233671
 GameObject:
   m_ObjectHideFlags: 0
