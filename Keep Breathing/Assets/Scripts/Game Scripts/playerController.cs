@@ -12,6 +12,7 @@ public class playerController : MonoBehaviour
     public bool run = false;
     public bool exhaust = false;
     public bool moving = true;
+    public AudioSource walkSound;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,13 @@ public class playerController : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
         }
+
+        //Audio
+        while (walk)
+        {
+            walkSound.Play();
+        }
+
         if (Input.GetKey(KeyCode.LeftShift) && walk == true)
         {
             speed = 10;
