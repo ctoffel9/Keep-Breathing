@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 9191300580692834865}
   - component: {fileID: 9191300580692834866}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: NotificationItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

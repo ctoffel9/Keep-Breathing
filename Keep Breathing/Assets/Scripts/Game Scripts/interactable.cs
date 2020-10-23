@@ -9,6 +9,7 @@ public class interactable : MonoBehaviour
     public KeyCode interactive;
     public UnityEvent interactAction;
     public GameObject notify;
+    private playerController PC;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (isInRange)
         {
             if (Input.GetKeyDown(interactive))
@@ -47,6 +49,7 @@ public class interactable : MonoBehaviour
         {
             isInRange = false;
             Debug.Log("Player now is not in range");
+            notify.SetActive(false);
         }
     }
 }

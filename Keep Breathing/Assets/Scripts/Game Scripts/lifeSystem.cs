@@ -6,6 +6,7 @@ public class lifeSystem : MonoBehaviour
 {
     public GameObject player;
     public playerController pC;
+    public SCM scm;
 
     public Text staminaView;
     public float stamina;
@@ -13,7 +14,7 @@ public class lifeSystem : MonoBehaviour
 
     public Text maskQualityView;
     public float maskQuality;
-    private float maskDecrease = 0.5f;
+    private float maskDecrease = 10f;
     public bool dangerZone;
     public bool maskerON;
 
@@ -21,7 +22,6 @@ public class lifeSystem : MonoBehaviour
     public float health;
     private float healthDecrease;
     
-
 
     // Start is called before the first frame update
     void Start()
@@ -125,6 +125,10 @@ public class lifeSystem : MonoBehaviour
         if (health == 0 || health < 0)
         {
             Debug.Log("Player is not breathing");
+            scm.LP.SetActive(true);
+            scm.US.SetActive(false);
+           
+            
         }
     }
 }

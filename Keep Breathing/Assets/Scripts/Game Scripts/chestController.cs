@@ -8,6 +8,7 @@ public class chestController : MonoBehaviour
     public Animator anim;
     private inventorySystem inventory;
     public GameObject itemButton;
+    private playerController player;
     bool inventOn;
     public void openChest()
     {
@@ -15,6 +16,11 @@ public class chestController : MonoBehaviour
         {
             if (inventOn)
             {
+                if (gameObject.tag == "key")
+                {
+                    player.key = player.key + 1;
+                    Debug.Log("keying berhasil");
+                }
                 isOpen = true;
                 Debug.Log("Chest is now open...");
                 for (int i = 0; i < inventory.slots.Length; i++)
@@ -40,6 +46,7 @@ public class chestController : MonoBehaviour
 
     private void Update()
     {
+        player = GameObject.FindWithTag("PlayerControl").GetComponent<playerController>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<inventorySystem>();
         if (isOpen == true)
         {
@@ -53,6 +60,8 @@ public class chestController : MonoBehaviour
         {
             inventOn = false;
         }
+
+
     }
 
 }

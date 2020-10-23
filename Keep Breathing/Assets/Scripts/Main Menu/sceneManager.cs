@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour
 {
+    public GameObject optionsPanel;
     public void newGame()
     {
         SceneManager.LoadScene("Intro");
@@ -14,4 +15,15 @@ public class sceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level 1");
     }
+
+    public void options()
+    {
+        optionsPanel.SetActive(true);   
+    }
+
+    public void closeoptions()
+    {
+        optionsPanel.SetActive(false);
+    }
+
 }
