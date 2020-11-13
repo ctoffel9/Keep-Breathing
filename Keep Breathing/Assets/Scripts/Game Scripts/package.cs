@@ -8,6 +8,11 @@ public class package : MonoBehaviour
     public GameObject inventory;
     public GameObject Masker;
     public GameObject Tube;
+    private lifeSystem ls;
+    private void Start()
+    {
+        ls = GameObject.Find("gameSceneController").GetComponent<lifeSystem>();
+    }
     public void takePackage()
     {
         if (!isOpen)
@@ -21,6 +26,7 @@ public class package : MonoBehaviour
     {
         if (isOpen == true)
         {
+            ls.enabled = true;
             inventory.SetActive(true);
             Masker.SetActive(true);
             Tube.SetActive(true);

@@ -6,6 +6,7 @@ public class gameSceneController : MonoBehaviour
 {
     public Camera MainCamera;
     public GameObject Player;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -9,16 +9,50 @@ public class SCM : MonoBehaviour
     public GameObject US;
     public GameObject LP;
     public GameObject PM;
-   public void closeQuest()
+    public GameObject IV;
+    private bool IVopen = false;
+
+    private lifeSystem ls;
+
+    private void Start()
+    {
+        ls = GameObject.Find("gameSceneController").GetComponent<lifeSystem>();
+    }
+    private void Update()
+    {
+        if (ls.enabled)
+        {
+            US.SetActive(true);
+        }
+    }
+    public void closeQuest()
     {
         QP.SetActive(false);
-        US.SetActive(true);
+        if (ls.enabled)
+        {
+            US.SetActive(true);
+        }
     }
 
     public void openQuest()
     {
         QP.SetActive(true);
         US.SetActive(false);
+    }
+
+
+    public void openInventory()
+    {
+        
+        if (!IVopen)
+        {
+            IV.SetActive(true);
+            IVopen = true;
+        } else
+        {
+            IV.SetActive(false);
+            IVopen = false;
+        }
     }
 
     public void mainMenu()

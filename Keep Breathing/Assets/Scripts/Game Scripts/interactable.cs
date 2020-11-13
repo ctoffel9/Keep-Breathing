@@ -10,6 +10,9 @@ public class interactable : MonoBehaviour
     public UnityEvent interactAction;
     public GameObject notify;
     private playerController PC;
+
+    public chestController chestC;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,20 +29,16 @@ public class interactable : MonoBehaviour
             {
                 interactAction.Invoke();
             }
-        } else
-        {
-            notify.SetActive(false);
-        }
+        } 
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            isInRange = true;
-            notify.SetActive(true);
-            Debug.Log("Player now is in range");
-            
+             isInRange = true;
+             notify.SetActive(true);
+             Debug.Log("Player now is in range");
         }
     }
 
@@ -50,6 +49,6 @@ public class interactable : MonoBehaviour
             isInRange = false;
             Debug.Log("Player now is not in range");
             notify.SetActive(false);
-        }
+       }
     }
 }
