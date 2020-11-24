@@ -8,6 +8,7 @@ TagManager:
   - key1
   - inven
   - PlayerControl
+  - maumere
   layers:
   - Default
   - TransparentFX

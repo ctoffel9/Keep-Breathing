@@ -9,6 +9,7 @@ public class chestController : MonoBehaviour
     private inventorySystem inventory;
     public GameObject itemButton;
     private playerController player;
+    public GameObject IC;
     bool inventOn;
     public void openChest()
     {
@@ -51,6 +52,7 @@ public class chestController : MonoBehaviour
         if (isOpen == true)
         {
             anim.SetBool("isOpen", true);
+            IC.SetActive(false);
         }
         if (inventory != null)
         {

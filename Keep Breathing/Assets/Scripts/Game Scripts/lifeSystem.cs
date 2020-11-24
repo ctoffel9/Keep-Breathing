@@ -14,7 +14,7 @@ public class lifeSystem : MonoBehaviour
 
     public Text maskQualityView;
     public float maskQuality;
-    private float maskDecrease = 10f;
+    public float maskDecrease;
     public bool dangerZone;
     public bool maskerON;
 
@@ -31,12 +31,13 @@ public class lifeSystem : MonoBehaviour
         Mathf.Clamp(stamina = 100, 0, 100);
         Mathf.Clamp(maskQuality = 100, 0, 100);
         Mathf.Clamp(health = 100, 0, 100);
+        Debug.Log(maskDecrease);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         staminaView.text = (Mathf.Floor(Mathf.Clamp(stamina, 0, 100)).ToString());
         maskQualityView.text = (Mathf.Floor(Mathf.Clamp(maskQuality, 0, 100)).ToString());
         healthView.text = (Mathf.Floor(Mathf.Clamp(health, 0, 100)).ToString());
