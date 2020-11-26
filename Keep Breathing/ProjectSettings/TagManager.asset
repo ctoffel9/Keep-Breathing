@@ -9,6 +9,8 @@ TagManager:
   - inven
   - PlayerControl
   - maumere
+  - DoorA
+  - DialogueM
   layers:
   - Default
   - TransparentFX

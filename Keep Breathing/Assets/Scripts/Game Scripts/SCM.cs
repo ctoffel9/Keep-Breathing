@@ -10,19 +10,32 @@ public class SCM : MonoBehaviour
     public GameObject LP;
     public GameObject PM;
     public GameObject IV;
+    public GameObject MC;
     private bool IVopen = false;
-
+    private GameObject DM;
+    public bool DMisON;
     private lifeSystem ls;
 
     private void Start()
     {
         ls = GameObject.Find("gameSceneController").GetComponent<lifeSystem>();
+        DM = GameObject.FindGameObjectWithTag("DialogueM");
+
     }
     private void Update()
     {
         if (ls.enabled)
         {
             US.SetActive(true);
+        }
+
+        if (DM.activeSelf)
+        {
+            MC.SetActive(false);
+        }
+        else if (!DM.activeSelf)
+        {
+            MC.SetActive(true);
         }
     }
     public void closeQuest()

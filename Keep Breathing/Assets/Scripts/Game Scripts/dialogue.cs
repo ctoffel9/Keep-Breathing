@@ -11,11 +11,20 @@ public class dialogue : MonoBehaviour
     public string[] sentences;
     private int index;
     public float typingSpeed;
+    public GameObject continueButton;
 
     private void Start()
     {
         whosTalking.text = theOneTalking;
         StartCoroutine(type());
+    }
+
+    private void Update()
+    {
+        if(textDisplay.text == sentences[index])
+        {
+            continueButton.SetActive(true);
+        }
     }
 
     IEnumerator type()
@@ -25,6 +34,24 @@ public class dialogue : MonoBehaviour
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
 
+        }
+    }
+
+    public void nextSentence()
+    {
+        continueButton.SetActive(false);
+
+        if (index < sentences.Length - 1)
+        {
+            index++;
+            textDisplay.text = "";
+            StartCoroutine(type());
+        }
+        else
+        {
+            textDisplay.text = "";
+            continueButton.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }
