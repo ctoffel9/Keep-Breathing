@@ -26,4 +26,13 @@ public class sceneManager : MonoBehaviour
         optionsPanel.SetActive(false);
     }
 
+    public void selectLevel()
+    {
+        SceneManager.LoadScene("Select Chapter");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
