@@ -14,8 +14,6 @@ public class playerController : MonoBehaviour
     public bool moving = true;
     public AudioSource walkSound;
     public AudioSource runSound;
-    public int key;
-    public bool adaKunci;
 
     // Start is called before the first frame update
     void Start()

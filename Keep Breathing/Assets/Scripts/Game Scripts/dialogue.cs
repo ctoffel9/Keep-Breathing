@@ -39,7 +39,7 @@ public class dialogue : MonoBehaviour
 
     public void nextSentence()
     {
-        continueButton.SetActive(false);
+        //continueButton.SetActive(false);
 
         if (index < sentences.Length - 1)
         {
@@ -49,10 +49,15 @@ public class dialogue : MonoBehaviour
         }
         else
         {
-            textDisplay.text = "";
-            continueButton.SetActive(false);
+            textDisplay.text = "...";
+        //    continueButton.SetActive(false);
             this.gameObject.SetActive(false);
         }
+    }
+
+    public void hide()
+    {
+        this.gameObject.SetActive(false);
     }
 }
  

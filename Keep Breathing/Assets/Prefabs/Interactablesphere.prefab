@@ -49,6 +49,8 @@ MonoBehaviour:
   interactAction:
     m_PersistentCalls:
       m_Calls: []
+  notify: {fileID: 0}
+  chestC: {fileID: 0}
 --- !u!135 &6025498658818840499
 SphereCollider:
   m_ObjectHideFlags: 0

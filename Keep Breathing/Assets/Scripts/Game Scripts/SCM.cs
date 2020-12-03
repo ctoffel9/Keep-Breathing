@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SCM : MonoBehaviour
@@ -19,8 +17,7 @@ public class SCM : MonoBehaviour
     private void Start()
     {
         ls = GameObject.Find("gameSceneController").GetComponent<lifeSystem>();
-        DM = GameObject.FindGameObjectWithTag("DialogueM");
-
+        DM = GameObject.FindWithTag("DialogueM");
     }
     private void Update()
     {
@@ -56,12 +53,13 @@ public class SCM : MonoBehaviour
 
     public void openInventory()
     {
-        
+
         if (!IVopen)
         {
             IV.SetActive(true);
             IVopen = true;
-        } else
+        }
+        else
         {
             IV.SetActive(false);
             IVopen = false;

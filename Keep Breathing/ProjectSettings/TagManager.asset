@@ -5,12 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - key
-  - key1
   - inven
   - PlayerControl
   - maumere
   - DoorA
   - DialogueM
+  - energyDrink
+  - supply
+  - dropPlace
+  - keyA
+  - key1
+  - keyB
+  - white
+  - codeBar
   layers:
   - Default
   - TransparentFX

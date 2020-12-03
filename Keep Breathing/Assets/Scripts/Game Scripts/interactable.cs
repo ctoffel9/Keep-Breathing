@@ -10,7 +10,6 @@ public class interactable : MonoBehaviour
     public UnityEvent interactAction;
     public GameObject notify;
     private playerController PC;
-
     public chestController chestC;
 
     // Start is called before the first frame update

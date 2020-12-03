@@ -10,17 +10,23 @@ public class lifeSystem : MonoBehaviour
 
     public Text staminaView;
     public float stamina;
+    public Image staminaBar;
     private float StaminaDecrease;
 
     public Text maskQualityView;
+    public Image maskBar;
     public float maskQuality;
     public float maskDecrease;
     public bool dangerZone;
     public bool maskerON;
 
     public Text healthView;
+    public Image healthBar;
     public float health;
     private float healthDecrease;
+
+    public float inventoryWeight;
+    public Image Weightbar;
     
 
     // Start is called before the first frame update
@@ -32,12 +38,17 @@ public class lifeSystem : MonoBehaviour
         Mathf.Clamp(maskQuality = 100, 0, 100);
         Mathf.Clamp(health = 100, 0, 100);
         Debug.Log(maskDecrease);
+        inventoryWeight = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        maskBar.fillAmount = Mathf.Floor(Mathf.Clamp(maskQuality, 0, 100)) / 100;
+        healthBar.fillAmount = Mathf.Floor(Mathf.Clamp(health, 0, 100)) / 100;
+        staminaBar.fillAmount = Mathf.Floor(Mathf.Clamp(stamina, 0, 100)) / 100;
+        Weightbar.fillAmount = inventoryWeight / 50;
+
         staminaView.text = (Mathf.Floor(Mathf.Clamp(stamina, 0, 100)).ToString());
         maskQualityView.text = (Mathf.Floor(Mathf.Clamp(maskQuality, 0, 100)).ToString());
         healthView.text = (Mathf.Floor(Mathf.Clamp(health, 0, 100)).ToString());
@@ -48,17 +59,18 @@ public class lifeSystem : MonoBehaviour
             maskerSystem();
         } 
         healthSystem();
-        
+
+        Debug.Log(inventoryWeight);
     }
     void staminaSystem()
     {
         if (pC.run == true)
         {
-            StaminaDecrease = 1;
+            StaminaDecrease = 0.2f * inventoryWeight;
         }
         else
         {
-            StaminaDecrease = 0.1f;
+            StaminaDecrease = 0.05f * inventoryWeight;
         }
         if (pC.walk || pC.run == true && stamina > 0)
         {
@@ -82,12 +94,12 @@ public class lifeSystem : MonoBehaviour
             pC.walk = false;
             pC.run = false;
             pC.moving = false;
-            if (stamina < 5)
+            if (stamina < 25)
             {
-                stamina = stamina + 1 * Time.deltaTime;
+                stamina = stamina + 2 * Time.deltaTime;
             }
         }
-        if (stamina >= 5)
+        if (stamina >= 25)
         {
             pC.anim.SetBool("capek", false);
             pC.exhaust = false;
