@@ -21,11 +21,13 @@ public class LightSwitches : MonoBehaviour
         {
             LManager.Lights[0].SetActive(true);
             LManager.Lights[2].SetActive(true);
+            LManager.Lights[3].SetActive(true);
         }
         else
         {
             LManager.Lights[0].SetActive(false);
             LManager.Lights[2].SetActive(false);
+            LManager.Lights[3].SetActive(false);
         }
         if (onB)
         {
@@ -40,6 +42,7 @@ public class LightSwitches : MonoBehaviour
             LManager.Lights[0].SetActive(false);
             LManager.Lights[1].SetActive(false);
             LManager.Lights[2].SetActive(false);
+            LManager.Lights[3].SetActive(false);
         }
     }
 
