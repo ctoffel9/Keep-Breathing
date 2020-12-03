@@ -138,6 +138,14 @@ public class chestController : MonoBehaviour
         {
             LSystem.inventoryWeight = LSystem.inventoryWeight + 1;
         }
+        if (this.gameObject.tag == "idCard")
+        {
+            LSystem.inventoryWeight = LSystem.inventoryWeight + 1;
+        }
+        if (this.gameObject.tag == "jerigen")
+        {
+            LSystem.inventoryWeight = LSystem.inventoryWeight + 5;
+        }
 
 
 

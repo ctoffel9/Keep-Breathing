@@ -19,7 +19,10 @@ public class codeBarScripts : MonoBehaviour
 
     private void Update()
     {
-        AccessCode = code[0] + code[1] + code[2] + code[3] + code[4] + code[5];
+        {
+            AccessCode = code[0] + code[1] + code[2] + code[3] + code[4] + code[5];
+        }
+
 
         if (AccessCode == DesireCode)
         {

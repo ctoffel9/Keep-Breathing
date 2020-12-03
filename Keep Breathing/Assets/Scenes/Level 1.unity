@@ -2153,6 +2153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935a621c2d5ca2b4a9f136e2c95a004e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrangeColor: 1
+  inputCode: 0
 --- !u!1 &177622024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8208229975827745842, guid: c76bfc1db0a27d64bbbdd99651f1754e,
@@ -3251,6 +3253,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50e46fcb18f5817409e8001cf2a4ebfe, type: 3}
   SprIndex: 0
   defaultSpr: {fileID: 21300000, guid: fc01adbb2fe31244e8dec799e65263c1, type: 3}
+  arrangeColor: 1
+  inputCode: 0
 --- !u!114 &264281026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8859,6 +8863,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50e46fcb18f5817409e8001cf2a4ebfe, type: 3}
   SprIndex: 0
   defaultSpr: {fileID: 21300000, guid: fc01adbb2fe31244e8dec799e65263c1, type: 3}
+  arrangeColor: 1
+  inputCode: 0
 --- !u!114 &756842002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9814,6 +9820,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50e46fcb18f5817409e8001cf2a4ebfe, type: 3}
   SprIndex: 0
   defaultSpr: {fileID: 21300000, guid: fc01adbb2fe31244e8dec799e65263c1, type: 3}
+  arrangeColor: 1
+  inputCode: 0
 --- !u!114 &817277867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14574,6 +14582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935a621c2d5ca2b4a9f136e2c95a004e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrangeColor: 1
+  inputCode: 0
 --- !u!1 &1258123852
 GameObject:
   m_ObjectHideFlags: 0
@@ -16528,6 +16538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935a621c2d5ca2b4a9f136e2c95a004e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrangeColor: 1
+  inputCode: 0
 --- !u!1001 &1453460043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16718,6 +16730,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50e46fcb18f5817409e8001cf2a4ebfe, type: 3}
   SprIndex: 0
   defaultSpr: {fileID: 21300000, guid: fc01adbb2fe31244e8dec799e65263c1, type: 3}
+  arrangeColor: 1
+  inputCode: 0
 --- !u!114 &1455629509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19208,6 +19222,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50e46fcb18f5817409e8001cf2a4ebfe, type: 3}
   SprIndex: 0
   defaultSpr: {fileID: 21300000, guid: fc01adbb2fe31244e8dec799e65263c1, type: 3}
+  arrangeColor: 1
+  inputCode: 0
 --- !u!114 &1727917682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20946,6 +20962,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50e46fcb18f5817409e8001cf2a4ebfe, type: 3}
   SprIndex: 0
   defaultSpr: {fileID: 21300000, guid: fc01adbb2fe31244e8dec799e65263c1, type: 3}
+  arrangeColor: 1
+  inputCode: 0
 --- !u!114 &1908367472
 MonoBehaviour:
   m_ObjectHideFlags: 0

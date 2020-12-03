@@ -40,4 +40,30 @@ public class randomItem : MonoBehaviour
         }
 
     }
+
+    public void idcard()
+    {
+        door = GameObject.FindGameObjectWithTag(tags);
+        IR = GameObject.FindGameObjectWithTag(tags).GetComponentInChildren<interactable>();
+        if (door & IR.isInRange)
+        {
+            Destroy(door);
+            Destroy(gameObject);
+            Debug.Log("found");
+            LS.inventoryWeight = LS.inventoryWeight - 1;
+        }
+    }
+
+    public void jerigen()
+    {
+        door = GameObject.FindGameObjectWithTag(tags);
+        IR = GameObject.FindGameObjectWithTag(tags).GetComponentInChildren<interactable>();
+        if (door & IR.isInRange)
+        {
+            Destroy(door);
+            Destroy(gameObject);
+            Debug.Log("found");
+            LS.inventoryWeight = LS.inventoryWeight - 5;
+        }
+    }
 }

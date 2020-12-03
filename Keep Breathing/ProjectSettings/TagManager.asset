@@ -18,6 +18,10 @@ TagManager:
   - keyB
   - white
   - codeBar
+  - idCardDoor
+  - idCard
+  - jerigen
+  - jerigenMinyak
   layers:
   - Default
   - TransparentFX
