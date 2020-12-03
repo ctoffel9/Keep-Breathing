@@ -5,7 +5,6 @@ using UnityEngine;
 public class LiftScript : MonoBehaviour
 {
     public Animator anim;
-    public Transform cube;
     public GameObject Player;
     public void buttonUp()
     {
@@ -20,7 +19,8 @@ public class LiftScript : MonoBehaviour
     {
         if (other.gameObject == Player)
         {
-            Player.transform.parent.position = cube.transform.position;
+            Debug.Log("Player");
+            Player.transform.parent = transform;
         }
     }
 }

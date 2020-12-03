@@ -14,11 +14,9 @@ public class playerController : MonoBehaviour
     public bool moving = true;
     public AudioSource walkSound;
     public AudioSource runSound;
-
     // Start is called before the first frame update
     void Start()
     {
-
         
     }
 
