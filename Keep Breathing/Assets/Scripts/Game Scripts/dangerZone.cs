@@ -13,7 +13,8 @@ public class dangerZone : MonoBehaviour
     public GameObject redPanel;
     public GameObject blackPanel;
 
-    void Start()
+
+    private void Update()
     {
         if (yellow)
         {
@@ -21,18 +22,22 @@ public class dangerZone : MonoBehaviour
             red = false;
             black = false;
         }
-        else if (red)
+        if (red)
         {
             lS.maskDecrease = 0.5f;
             yellow = false;
             black = false;
         }
-        else if (black)
+        if (black)
         {
             lS.maskDecrease = 1f;
             yellow = false;
             red = false;
         }
+    }
+    void Start()
+    {
+        
     }
 
     private void OnTriggerEnter(Collider other)

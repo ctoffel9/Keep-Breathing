@@ -37,7 +37,6 @@ public class lifeSystem : MonoBehaviour
         Mathf.Clamp(stamina = 100, 0, 100);
         Mathf.Clamp(maskQuality = 100, 0, 100);
         Mathf.Clamp(health = 100, 0, 100);
-        Debug.Log(maskDecrease);
         inventoryWeight = 1;
     }
 
@@ -60,7 +59,7 @@ public class lifeSystem : MonoBehaviour
         } 
         healthSystem();
 
-        Debug.Log(inventoryWeight);
+        Debug.Log(maskDecrease);
     }
     void staminaSystem()
     {
