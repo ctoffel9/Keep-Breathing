@@ -1,18 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class fillMinyak : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Image gasFill;
+    public float gas = 0;
+    public bool full;
+    private levelManager lManager;
+
+
+    private void Update()
     {
-        
+        gasFill.fillAmount = gas / 100;
+
+        if (gas >= 100)
+        {
+            gas = 100;
+            full = true;
+            lManager = GameObject.FindGameObjectWithTag("levelManager").GetComponent<levelManager>();
+            lManager.end = true;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void fillingGas()
     {
-        
+        gas++;
     }
+
 }

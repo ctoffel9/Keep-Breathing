@@ -146,6 +146,10 @@ public class chestController : MonoBehaviour
         {
             LSystem.inventoryWeight = LSystem.inventoryWeight + 5;
         }
+        if (this.gameObject.tag == "kunciInggris")
+        {
+            LSystem.inventoryWeight = LSystem.inventoryWeight + 2;
+        }
 
 
 

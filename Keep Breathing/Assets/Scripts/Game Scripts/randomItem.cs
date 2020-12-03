@@ -10,10 +10,12 @@ public class randomItem : MonoBehaviour
     public string tags;
 
     private dropScript dropPlace;
+    private controlPanel cPanel;
 
     private void Start()
     {
         LS = GameObject.FindWithTag("GameController").GetComponent<lifeSystem>();
+        cPanel = GameObject.FindWithTag("jerigenMinyak").GetComponent<controlPanel>();
     }
     public void unlockDoor()
     {
@@ -60,10 +62,23 @@ public class randomItem : MonoBehaviour
         IR = GameObject.FindGameObjectWithTag(tags).GetComponentInChildren<interactable>();
         if (door & IR.isInRange)
         {
+            cPanel.MiniGame.SetActive(true);
+            Debug.Log("found");
+            LS.inventoryWeight = LS.inventoryWeight + 5;
+        }
+    }
+
+    public void kunciInggris()
+    {
+        door = GameObject.FindGameObjectWithTag(tags);
+        IR = GameObject.FindGameObjectWithTag(tags).GetComponentInChildren<interactable>();
+        if (door & IR.isInRange)
+        {
             Destroy(door);
             Destroy(gameObject);
             Debug.Log("found");
-            LS.inventoryWeight = LS.inventoryWeight - 5;
+            LS.inventoryWeight = LS.inventoryWeight - 2;
         }
+
     }
 }

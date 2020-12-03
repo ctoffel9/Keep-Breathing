@@ -22,6 +22,9 @@ TagManager:
   - idCard
   - jerigen
   - jerigenMinyak
+  - levelManager
+  - kunciInggris
+  - wrench
   layers:
   - Default
   - TransparentFX

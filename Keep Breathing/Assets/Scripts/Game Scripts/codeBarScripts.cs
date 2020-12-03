@@ -10,10 +10,12 @@ public class codeBarScripts : MonoBehaviour
     private string AccessCode;
     public string DesireCode;
     public bool controlPanelON;
+    private levelManager lManager;
 
     private void Start()
     {
         buttonIndex = 0;
+        lManager = GameObject.FindGameObjectWithTag("levelManager").GetComponent<levelManager>();
         
     }
 
@@ -27,6 +29,8 @@ public class codeBarScripts : MonoBehaviour
         if (AccessCode == DesireCode)
         {
             controlPanelON = true;
+            Debug.Log("anbjaybisa");
+            lManager.RightCode = true;
         }
     }
 

@@ -11,11 +11,18 @@ public class levelManager : MonoBehaviour
     public GameObject[] pakYudha;
     public GameObject[] teknisi;
     public GameObject[] keyBoard;
-    public GameObject EndTrigger;
+    
 
     //Level 2
     public bool level2;
     public GameObject[] Lights;
+    public GameObject doorWitchCode;
+    public bool RightCode;
+    public bool end;
+    public GameObject EndTrigger;
+
+    //level3
+    public bool level3;
 
 
 
@@ -44,6 +51,12 @@ public class levelManager : MonoBehaviour
             //Lights
             Lights[0].SetActive(false);
             Lights[1].SetActive(false);
+            Lights[2].SetActive(false);
+            Lights[3].SetActive(false);
+
+            EndTrigger.SetActive(false);
+
+            
         }
         
 
@@ -75,6 +88,32 @@ public class levelManager : MonoBehaviour
                     teknisi[1].SetActive(true);
                     EndTrigger.SetActive(true);
                 }
+            }
+        }
+
+        if (level2)
+        {
+            if (RightCode == true)
+            {
+                Destroy(doorWitchCode);
+            } 
+
+            if (end)
+            {
+                EndTrigger.SetActive(true);
+            }
+        }
+
+        if (level3)
+        {
+            if (RightCode == true)
+            {
+                Destroy(doorWitchCode);
+            }
+
+            if (end)
+            {
+                EndTrigger.SetActive(true);
             }
         }
       

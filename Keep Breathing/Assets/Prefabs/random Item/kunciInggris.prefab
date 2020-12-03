@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3812849784098259676
+--- !u!1 &1174302934552063334
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2934676449973138738}
-  - component: {fileID: 4105463678734950726}
-  - component: {fileID: 2990533898207105098}
-  - component: {fileID: 1667652878164474391}
-  - component: {fileID: 7000175145050187080}
+  - component: {fileID: 4085147135092086531}
+  - component: {fileID: 1864344818507198808}
+  - component: {fileID: 1377885292127224660}
+  - component: {fileID: 2606822301901439258}
+  - component: {fileID: 7891095869210710689}
   m_Layer: 5
-  m_Name: jerigen
-  m_TagString: jerigen
+  m_Name: kunciInggris
+  m_TagString: kunciInggris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2934676449973138738
+--- !u!224 &4085147135092086531
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3812849784098259676}
+  m_GameObject: {fileID: 1174302934552063334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -37,23 +37,23 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 175, y: 175}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4105463678734950726
+--- !u!222 &1864344818507198808
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3812849784098259676}
+  m_GameObject: {fileID: 1174302934552063334}
   m_CullTransparentMesh: 0
---- !u!114 &2990533898207105098
+--- !u!114 &1377885292127224660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3812849784098259676}
+  m_GameObject: {fileID: 1174302934552063334}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: afb0966051159dc448beaee93a588c0a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9992a1bfb4cdc1842bda6b28e84142af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,13 +76,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1667652878164474391
+--- !u!114 &2606822301901439258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3812849784098259676}
+  m_GameObject: {fileID: 1174302934552063334}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -115,12 +115,12 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2990533898207105098}
+  m_TargetGraphic: {fileID: 1377885292127224660}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7000175145050187080}
-        m_MethodName: jerigen
+      - m_Target: {fileID: 7891095869210710689}
+        m_MethodName: kunciInggris
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -130,16 +130,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7000175145050187080
+--- !u!114 &7891095869210710689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3812849784098259676}
+  m_GameObject: {fileID: 1174302934552063334}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6362bca162c029f439a609dc0ac29d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: jerigenMinyak
+  tags: wrench
