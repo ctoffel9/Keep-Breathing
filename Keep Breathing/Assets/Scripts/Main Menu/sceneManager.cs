@@ -82,6 +82,18 @@ public class sceneManager : MonoBehaviour
         StartCoroutine(MMsc());
     }
 
+    public void Credits()
+    {
+
+        StartCoroutine(CRD());
+    }
+
+    public void Exit()
+    {
+
+        StartCoroutine(X());
+    }
+
     public void closePause()
     {
         SceneContromM = GameObject.FindWithTag("GameController").GetComponent<SCM>();
@@ -171,4 +183,19 @@ public class sceneManager : MonoBehaviour
 
     }
 
+    IEnumerator CRD()
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Credits");
+
+    }
+
+    IEnumerator X()
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
+        Application.Quit();
+
+    }
 }
