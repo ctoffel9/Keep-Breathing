@@ -14,9 +14,11 @@ public class randomItem : MonoBehaviour
     private controlPanel cPanel;
     private controlPanel cPanel2;
     private levelManager lManager;
+    private SCM scm;
 
     private void Start()
     {
+        scm = GameObject.FindWithTag("GameController").GetComponent<SCM>();
         LS = GameObject.FindWithTag("GameController").GetComponent<lifeSystem>();
         lManager = GameObject.FindWithTag("levelManager").GetComponent<levelManager>();
 
@@ -37,6 +39,7 @@ public class randomItem : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("found");
             LS.inventoryWeight = LS.inventoryWeight - 1;
+            scm.itemSound.Play();
         }
        
     }
@@ -49,6 +52,7 @@ public class randomItem : MonoBehaviour
             dropPlace.index = dropPlace.index + 1;
             Destroy(gameObject);
             LS.inventoryWeight = LS.inventoryWeight - 2;
+            scm.itemSound.Play();
         }
 
     }
@@ -63,6 +67,7 @@ public class randomItem : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("found");
             LS.inventoryWeight = LS.inventoryWeight - 1;
+            scm.itemSound.Play();
         }
     }
 
@@ -75,6 +80,7 @@ public class randomItem : MonoBehaviour
             cPanel.MiniGame.SetActive(true);
             Debug.Log("found");
             LS.inventoryWeight = LS.inventoryWeight + 5;
+            scm.itemSound.Play();
         }
     }
 
@@ -88,6 +94,7 @@ public class randomItem : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("found");
             LS.inventoryWeight = LS.inventoryWeight - 2;
+            scm.itemSound.Play();
         }
 
     }
@@ -104,6 +111,7 @@ public class randomItem : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("found");
             LS.inventoryWeight = LS.inventoryWeight - 2;
+            scm.itemSound.Play();
         }
 
     }

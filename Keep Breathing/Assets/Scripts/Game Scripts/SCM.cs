@@ -14,6 +14,10 @@ public class SCM : MonoBehaviour
     public bool DMisON;
     private lifeSystem ls;
 
+    public AudioSource rucksack;
+    public AudioSource itemSound;
+
+
     private void Start()
     {
         ls = GameObject.Find("gameSceneController").GetComponent<lifeSystem>();
@@ -58,11 +62,13 @@ public class SCM : MonoBehaviour
         {
             IV.SetActive(true);
             IVopen = true;
+            rucksack.Play();
         }
         else
         {
             IV.SetActive(false);
             IVopen = false;
+            rucksack.Play();
         }
     }
 

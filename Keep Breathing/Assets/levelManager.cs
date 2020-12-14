@@ -23,6 +23,10 @@ public class levelManager : MonoBehaviour
 
     //level3
     public bool level3;
+    public GameObject FanSwitch;
+    public bool exactCode;
+    public GameObject lift;
+    public bool switchOn;
 
 
 
@@ -63,6 +67,8 @@ public class levelManager : MonoBehaviour
         {
             //Lights
             Lights[0].SetActive(false);
+            FanSwitch.SetActive(false);
+            lift.SetActive(false);
 
 
         }
@@ -122,6 +128,16 @@ public class levelManager : MonoBehaviour
             if (end)
             {
                 EndTrigger.SetActive(true);
+            }
+
+            if (exactCode)
+            {
+                FanSwitch.SetActive(true);
+            }
+
+            if (switchOn)
+            {
+                lift.SetActive(true);
             }
         }
       
