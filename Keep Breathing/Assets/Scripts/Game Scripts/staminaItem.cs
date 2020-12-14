@@ -5,6 +5,7 @@ using UnityEngine;
 public class staminaItem : MonoBehaviour
 {
     private lifeSystem LS;
+    private AudioSource AS;
     private void Start()
     {
         LS = GameObject.FindWithTag("GameController").GetComponent<lifeSystem>();

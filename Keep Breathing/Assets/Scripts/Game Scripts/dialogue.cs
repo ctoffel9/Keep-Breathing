@@ -16,15 +16,13 @@ public class dialogue : MonoBehaviour
     private void Start()
     {
         whosTalking.text = theOneTalking;
-        StartCoroutine(type());
+        textDisplay.text = sentences[0];
+        //StartCoroutine(type());
     }
 
     private void Update()
     {
-        if(textDisplay.text == sentences[index])
-        {
-            continueButton.SetActive(true);
-        }
+        textDisplay.text = sentences[index];
     }
 
     IEnumerator type()
@@ -39,20 +37,30 @@ public class dialogue : MonoBehaviour
 
     public void nextSentence()
     {
-        //continueButton.SetActive(false);
-
         if (index < sentences.Length - 1)
         {
             index++;
-            textDisplay.text = "";
-            StartCoroutine(type());
         }
-        else
+        else if (index == sentences.Length - 1)
+        {
+            this.gameObject.SetActive(false);
+        }
+
+
+        //continueButton.SetActive(false);
+
+        /*if (index < sentences.Length - 1)
+        {
+            index++;
+            //textDisplay.text = "";
+            //StartCoroutine(type());
+        }
+        else 
         {
             textDisplay.text = "...";
         //    continueButton.SetActive(false);
             this.gameObject.SetActive(false);
-        }
+        }*/
     }
 
     public void hide()

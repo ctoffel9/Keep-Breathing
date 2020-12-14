@@ -25,6 +25,39 @@ TagManager:
   - levelManager
   - kunciInggris
   - wrench
+  - itemUsedSound
+  - vitamin
+  - dopping
+  - wedangJahe
+  - adrenaline
+  - soda
+  - botolAir
+  - kopiJos
+  - galonAir
+  - bandage
+  - firstAidKit
+  - makananKaleng
+  - antiBiotic
+  - roti
+  - snackBar
+  - nasdukSB
+  - naspadSB
+  - jagung
+  - kacang
+  - miInstan
+  - filter
+  - filterN95
+  - filterN100
+  - baterai9V
+  - bateraiC
+  - bateraiAA
+  - purifier
+  - filterP95
+  - kopi
+  - Puterab
+  - Check
+  - kunciPipa
+  - pipa
   layers:
   - Default
   - TransparentFX
@@ -35,7 +68,7 @@ TagManager:
   - 
   - 
   - Post-Processing
-  - 
+  - Transition
   - 
   - 
   - 

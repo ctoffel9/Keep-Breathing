@@ -58,7 +58,15 @@ public class levelManager : MonoBehaviour
 
             
         }
-        
+
+        if (level3)
+        {
+            //Lights
+            Lights[0].SetActive(false);
+
+
+        }
+
 
     }
 

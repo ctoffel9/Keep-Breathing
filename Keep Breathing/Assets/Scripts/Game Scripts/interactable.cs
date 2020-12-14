@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Audio;
 
 public class interactable : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class interactable : MonoBehaviour
     public GameObject notify;
     private playerController PC;
     public chestController chestC;
+    public AudioSource effectSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,7 @@ public class interactable : MonoBehaviour
             if (Input.GetKeyDown(interactive))
             {
                 interactAction.Invoke();
+                effectSound.Play();
             }
         } 
     }

@@ -9,8 +9,12 @@ public class fillMinyak : MonoBehaviour
     public float gas = 0;
     public bool full;
     private levelManager lManager;
+    public GameObject fullSound;
 
-
+    private void Start()
+    {
+        fullSound.SetActive(false);
+    }
     private void Update()
     {
         gasFill.fillAmount = gas / 100;
@@ -21,6 +25,7 @@ public class fillMinyak : MonoBehaviour
             full = true;
             lManager = GameObject.FindGameObjectWithTag("levelManager").GetComponent<levelManager>();
             lManager.end = true;
+            fullSound.SetActive(true);
         }
 
     }

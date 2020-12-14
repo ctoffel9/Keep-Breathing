@@ -5,17 +5,27 @@ using UnityEngine;
 public class randomItem : MonoBehaviour
 {
     private GameObject door;
+    private GameObject doorPipa;
     private interactable IR;
     private lifeSystem LS;
     public string tags;
 
     private dropScript dropPlace;
     private controlPanel cPanel;
+    private controlPanel cPanel2;
+    private levelManager lManager;
 
     private void Start()
     {
         LS = GameObject.FindWithTag("GameController").GetComponent<lifeSystem>();
-        cPanel = GameObject.FindWithTag("jerigenMinyak").GetComponent<controlPanel>();
+        lManager = GameObject.FindWithTag("levelManager").GetComponent<levelManager>();
+
+        if (lManager.level2)
+        {
+            cPanel = GameObject.FindWithTag("jerigenMinyak").GetComponent<controlPanel>();
+            cPanel2 = GameObject.FindWithTag("pipa").GetComponent<controlPanel>();
+        }
+        
     }
     public void unlockDoor()
     {
@@ -75,6 +85,22 @@ public class randomItem : MonoBehaviour
         if (door & IR.isInRange)
         {
             Destroy(door);
+            Destroy(gameObject);
+            Debug.Log("found");
+            LS.inventoryWeight = LS.inventoryWeight - 2;
+        }
+
+    }
+
+    public void kunciPipa()
+    {
+        door = GameObject.FindGameObjectWithTag(tags);
+        doorPipa = GameObject.Find("DoorPipa");
+        IR = GameObject.FindGameObjectWithTag(tags).GetComponentInChildren<interactable>();
+        if (door & IR.isInRange)
+        {
+            cPanel2.MiniGame.SetActive(true);
+            Destroy(doorPipa);
             Destroy(gameObject);
             Debug.Log("found");
             LS.inventoryWeight = LS.inventoryWeight - 2;

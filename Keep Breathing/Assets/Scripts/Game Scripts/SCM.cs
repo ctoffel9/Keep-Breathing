@@ -66,6 +66,7 @@ public class SCM : MonoBehaviour
         }
     }
 
+   
     public void mainMenu()
     {
         SceneManager.LoadScene("Main Menu");
@@ -86,4 +87,5 @@ public class SCM : MonoBehaviour
         PM.SetActive(true);
         Time.timeScale = 0;
     }
+
 }

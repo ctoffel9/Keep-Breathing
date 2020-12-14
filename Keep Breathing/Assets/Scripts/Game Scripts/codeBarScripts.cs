@@ -11,11 +11,14 @@ public class codeBarScripts : MonoBehaviour
     public string DesireCode;
     public bool controlPanelON;
     private levelManager lManager;
+    public GameObject AS;
 
     private void Start()
     {
         buttonIndex = 0;
-        lManager = GameObject.FindGameObjectWithTag("levelManager").GetComponent<levelManager>();
+        lManager = GameObject.FindGameObjectWithTag("levelManager").GetComponent<levelManager>();    
+        AS.SetActive(false);
+
         
     }
 
@@ -30,6 +33,7 @@ public class codeBarScripts : MonoBehaviour
         {
             controlPanelON = true;
             Debug.Log("anbjaybisa");
+            AS.SetActive(true);
             lManager.RightCode = true;
         }
     }

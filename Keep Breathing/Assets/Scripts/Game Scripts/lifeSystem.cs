@@ -12,6 +12,7 @@ public class lifeSystem : MonoBehaviour
     public float stamina;
     public Image staminaBar;
     private float StaminaDecrease;
+    public GameObject staminaMeta;
 
     public Text maskQualityView;
     public Image maskBar;
@@ -23,7 +24,9 @@ public class lifeSystem : MonoBehaviour
     public Text healthView;
     public Image healthBar;
     public float health;
-    private float healthDecrease;
+    public float healthDecrease;
+    public GameObject healthMeta;
+    private bool HMOn;
 
     public float inventoryWeight;
     public Image Weightbar;
@@ -33,7 +36,7 @@ public class lifeSystem : MonoBehaviour
     void Start()
     {
         maskerON = true;
-        healthDecrease = maskDecrease;
+        //healthDecrease = maskDecrease;
         Mathf.Clamp(stamina = 100, 0, 100);
         Mathf.Clamp(maskQuality = 100, 0, 100);
         Mathf.Clamp(health = 100, 0, 100);
@@ -52,6 +55,11 @@ public class lifeSystem : MonoBehaviour
         maskQualityView.text = (Mathf.Floor(Mathf.Clamp(maskQuality, 0, 100)).ToString());
         healthView.text = (Mathf.Floor(Mathf.Clamp(health, 0, 100)).ToString());
 
+        if (!dangerZone)
+        {
+            maskDecrease = 0;
+        }
+
         staminaSystem();
         if (maskerON == true)
         {
@@ -60,6 +68,10 @@ public class lifeSystem : MonoBehaviour
         healthSystem();
 
         Debug.Log(maskDecrease);
+
+        maskDecrease = maskDecrease;
+
+        healthDecrease = maskDecrease;
     }
     void staminaSystem()
     {
@@ -96,6 +108,7 @@ public class lifeSystem : MonoBehaviour
             if (stamina < 25)
             {
                 stamina = stamina + 2 * Time.deltaTime;
+                staminaMeta.SetActive(true);
             }
         }
         if (stamina >= 25)
@@ -103,6 +116,7 @@ public class lifeSystem : MonoBehaviour
             pC.anim.SetBool("capek", false);
             pC.exhaust = false;
             pC.moving = true;
+            staminaMeta.SetActive(false);
         }
     }
     void maskerSystem()
@@ -133,7 +147,17 @@ public class lifeSystem : MonoBehaviour
         if (maskerON == false | maskQuality <= 0 && dangerZone == true && health > 0)
         {
             health = health - healthDecrease * Time.deltaTime;
+        } 
+
+        if (health < 35)
+        {
+            healthMeta.SetActive(true);
         }
+        else
+        {
+            healthMeta.SetActive(false);
+        }
+     
         if (health == 0 || health < 0)
         {
             Debug.Log("Player is not breathing");

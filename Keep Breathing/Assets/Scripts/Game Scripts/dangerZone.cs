@@ -8,42 +8,67 @@ public class dangerZone : MonoBehaviour
     public bool yellow = false;
     public bool red = false;
     public bool black = false;
+    private bool playerOnPoint;
 
     public GameObject yellowPanel;
     public GameObject redPanel;
     public GameObject blackPanel;
 
 
-    private void Update()
+    /*private void Update()
     {
         if (yellow)
         {
             lS.maskDecrease = 0.1f;
-            red = false;
-            black = false;
+            //red = false;
+            //black = false;
         }
         if (red)
         {
             lS.maskDecrease = 0.5f;
-            yellow = false;
-            black = false;
+            //yellow = false;
+            //black = false;
         }
         if (black)
         {
             lS.maskDecrease = 1f;
-            yellow = false;
-            red = false;
+            //yellow = false;
+            //red = false;
         }
-    }
-    void Start()
+    }*/
+    
+    void maskDecrease()
     {
-        
+        if (yellow)
+        {
+            lS.maskDecrease = 0.1f;
+            //red = false;
+            //black = false;
+        }
+        if (red)
+        {
+            lS.maskDecrease = 0.5f;
+            //yellow = false;
+            //black = false;
+        }
+        if (black)
+        {
+            lS.maskDecrease = 1f;
+            //yellow = false;
+            //red = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            playerOnPoint = true;
+            if (playerOnPoint)
+            {
+                maskDecrease();
+            }
+
             if (yellow)
             {
                 yellowPanel.SetActive(true);
@@ -62,6 +87,7 @@ public class dangerZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            playerOnPoint = false;
             if (yellow)
             {
                 yellowPanel.SetActive(false);
